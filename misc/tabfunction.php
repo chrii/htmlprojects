@@ -1,15 +1,28 @@
 <?php
 
-function tableBuild($id="none", $fname="Insert Name", $sname="Insert Surname", $handle="Handleshortcut")
+class CreateTable 
 {
-    return "<tr><th scope='row'>{$id}</th><td>{$fname}</td><td>{$sname}</td><td>{$handle}</td></tr>";
+    public function __construct($database)
+    {
+        $this->database = $database;
+    }
+    public function createRow()
+    {
+        foreach ($this->database AS $key => $row)
+        {
+            $id = $key +1;
+            $fname = $this->database[$key]["firstname"];
+            $sname = $this->database[$key]["surname"];
+            $handle = $this->database[$key]["handle"];
+            echo "<tr><th scope='row'>{$id}</th><td>{$fname}</td><td>{$sname}</td><td>{$handle}</td></tr>";
+        }
+    }
 }
 
-function tabledb($database)
+function navItems($itemdb)
 {
-    foreach ($database AS $key => $row)
-    {
-        $count = $key +1;
-        echo tableBuild($count, $database[$key]["firstname"], $database[$key]["surname"], $database[$key]["handle"]);
+    foreach ($itemdb AS $item)
+    { 
+        echo "<a class='nav-item nav-link' href='#'>{$item}</a>";
     }
 }

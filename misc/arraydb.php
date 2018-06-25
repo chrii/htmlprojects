@@ -21,3 +21,7 @@ $userdb = [
         "handle" => "@osk"
     ]
 ];
+$navItemsdb = [
+    "Blog",
+    "Projects"
+];

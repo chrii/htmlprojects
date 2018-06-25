@@ -24,7 +24,9 @@
             </thead>
             <tbody>
                 <?php 
-                tabledb($userdb);
+                $table = new CreateTable($userdb);
+                $table->createRow();
+                
                 ?>
             </tbody>
         </table>
