@@ -22,6 +22,7 @@ $userdb = [
     ]
 ];
 $navItemsdb = [
-    "Blog",
-    "Projects"
+    "blogpage" => "Blog",
+    "projectpage" => "Projects",
+    "videopage" => "Videos"
 ];

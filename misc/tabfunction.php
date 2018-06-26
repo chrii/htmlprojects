@@ -21,8 +21,8 @@ class CreateTable
 
 function navItems($itemdb)
 {
-    foreach ($itemdb AS $item)
+    foreach ($itemdb AS $key => $item)
     { 
-        echo "<a class='nav-item nav-link' href='#'>{$item}</a>";
+        echo "<a class='nav-item nav-link' href='pages/{$key}.php'>{$item}</a>";
     }
 }
