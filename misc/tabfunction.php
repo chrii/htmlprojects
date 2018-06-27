@@ -19,10 +19,26 @@ class CreateTable
     }
 }
 
-function navItems($itemdb)
+function navItems($itemdb, $dropdowndb)
 {
     foreach ($itemdb AS $key => $item)
     { 
-        echo "<a class='nav-item nav-link' href='pages/{$key}.php'>{$item}</a>";
+        if ($item == "Projects")
+        {
+            echo "<li class='nav-item dropdown'>
+            <a class='nav-link dropdown-toggle' href='#' id='navbarDropdownMenuLink' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+            {$item}
+            </a>
+            <div class='dropdown-menu' aria-labelledby='navbarDropdownMenuLink'>";
+
+            foreach ($dropdowndb AS $ddKey => $ddItem)
+            {
+                echo "<a class='dropdown-item' href='{$ddKey}.php'>{$ddItem}</a>";
+            }
+            echo "</div>";
+        } else 
+        {
+            echo "<a class='nav-item nav-link' href='../pages/{$key}.php'>{$item}</a>";
+        }
     }
 }

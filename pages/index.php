@@ -1,10 +1,11 @@
 <?php
-    include "misc/arraydb.php";
-    include "misc/tabfunction.php";
-    include "misc/head.php";
-    include "misc/navbar.php";
+    include "../misc/arraydb.php";
+    include "../misc/tabfunction.php";
+    include "../misc/head.php";
+    include "../misc/navbar.php";
 ?>
-
+</head>
+<body>
 <div class="jumbotron">
     <h4 class="display-4">Willkommen</h4>
     <p class="lead">Willkommen auf meiner PHP und Javascript Testseite</p>
@@ -30,4 +31,4 @@
         ?>
     </tbody>
 </table>
-<?php include "misc/footer.php"; ?>
+<?php include "../misc/footer.php"; ?>

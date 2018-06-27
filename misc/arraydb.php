@@ -23,6 +23,12 @@ $userdb = [
 ];
 $navItemsdb = [
     "blogpage" => "Blog",
-    "projectpage" => "Projects",
-    "videopage" => "Videos"
+    "videopage" => "Videos",
+    "projectpage" => "Projects"
+];
+
+$dropDownItemsdb = [
+    "reaktionstest" => "Reaktionstest",
+    "bmi" => "BMI - Rechner",
+    "orderlist" => "Bestellformular"
 ];

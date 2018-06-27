@@ -4,7 +4,8 @@
     include "../misc/head.php";
     include "../misc/navbar.php";
 ?>
- 
+</head>
+<body>
 <div class="container">
     <div class="row">
         <div class="col-sm-8">
