@@ -38,16 +38,25 @@
       <div class="card-body">
         <h5 class="card-title">BMI-Rechner</h5>
         <p class="card-text">        
-            <label for="height">Körpergröße in Meter: </label>
-            <input type="number" id="height" name="height"/>
+            <!--<label for="height">Körpergröße in Meter: </label>
+            <input type="number" id="height" name="height"/>-->
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Körpergröße in Meter:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="height">
+            </div>
             <br />
-            <label for="weight">Gewicht in Kilogramm:</label>
-            <input type="number" id="weight" name="weight"/>
+            <!--<label for="weight">Gewicht in Kilogramm:</label>
+            <input type="number" id="weight" name="weight"/>-->
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">Gewicht in Kilogramm:</span>
+            </div>
+            <input type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" id="weight">
+            </div>
             <br />
         </p>
-        <button type="button" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off" id="saveBmi">
-            Berechnen
-        </button>
       </div>
     </div>
   </div>

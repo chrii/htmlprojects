@@ -54,9 +54,6 @@ window.addEventListener("load", function(){
         };
         
     };
-    bmiBtn.addEventListener("click", function(){
-        console.log(bmiCalc());
-    }, false);
 
     heightRaw.addEventListener("change", weightAsk);
     heightRaw.addEventListener("keyup", weightAsk);

@@ -36,7 +36,8 @@ function navItems($itemdb, $dropdowndb)
                 echo "<a class='dropdown-item' href='{$ddKey}.php'>{$ddItem}</a>";
             }
             echo "</div>";
-        } else 
+        } 
+        else 
         {
             echo "<a class='nav-item nav-link' href='../pages/{$key}.php'>{$item}</a>";
         }
