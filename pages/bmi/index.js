@@ -26,47 +26,46 @@ window.addEventListener("load", function(){
         return bmiFin;
     };
 
-    bmiBtn.addEventListener("click", function(){
         //Speichert den BMI Wert in einem Array
-        savedBmi.push(bmiCalc());  
-        
-        let durchschnitt = 0;
-        let bmi4html = "";      
-        console.log(durchschnitt);
-
+        //savedBmi.push(bmiCalc());  
+    let weightAsk = () => {    
         //Gibt das Array als Liste zurück **und errechnet den Durchschnittswert**
-        for (let element of savedBmi){
+        /*for (let element of savedBmi){
 
             bmi4html = bmi4html + "<li>" + element + "</li>";
             listElement.innerHTML = bmi4html;
 
             schnitt.innerText = Math.round((durchschnitt * 10) / 10);
 
-        };
-        
+        };*/
         let weightOption = document.getElementById("weight-option");
-        if (bmiCalc <= 18.5){
+        
+        if (bmiCalc() <= 18.5)
+        {
             weightOption.innerText = "Untergewicht";
-        } else if (bmiCalc > 18.5 && bmiCalc <= 25){
+        } 
+        else if (bmiCalc() > 18.5 && bmiCalc() <= 25)
+        {
             weightOption.innerText = "Normalgewicht";
         }
-        else {
+        else 
+        {
             weightOption.innerText = "Übergewicht";
         };
-
+        
+    };
+    bmiBtn.addEventListener("click", function(){
+        console.log(bmiCalc());
     }, false);
+
+    heightRaw.addEventListener("change", weightAsk);
+    heightRaw.addEventListener("keyup", weightAsk);
+    weightRaw.addEventListener("change", weightAsk);
+    weightRaw.addEventListener("keyup", weightAsk);
 
     heightRaw.addEventListener("change", bmiCalc);
     weightRaw.addEventListener("change", bmiCalc);
     heightRaw.addEventListener("keyup", bmiCalc);
     weightRaw.addEventListener("keyup", bmiCalc);
 
-    let counter = 0;
-    cCounter.innerText = counter;
-    let button = document.getElementById("calculate");
-    button.addEventListener("click", function(){
-        counter = counter + 1;
-        cCounter.innerText = counter;
-
-    }, false);
 }, false);
