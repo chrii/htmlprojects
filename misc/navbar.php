@@ -7,8 +7,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
-                <?php navItems($navItemsdb, $dropDownItemsdb); ?>
+                <a class="nav-item nav-link active" href="index.php">Home<span class="sr-only">(current)</span></a>
+                <?php 
+                include "NavItemsFunction.php";
+                $navItem = new NavItemsFunction();
+                $navItem->navItems($navItemsdb, $dropDownItemsdb);
+                //navItems($navItemsdb, $dropDownItemsdb);
+                 ?>
             </div>
         </div>
         </nav>

@@ -1,6 +1,5 @@
 <?php
     include "../misc/arraydb.php";
-    include "../misc/tabfunction.php";
     include "../misc/head.php";
     include "../misc/navbar.php";
 ?>
