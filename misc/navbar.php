@@ -9,7 +9,6 @@
             <div class="navbar-nav">
                 <a class="nav-item nav-link active" href="index.php">Home<span class="sr-only">(current)</span></a>
                 <?php 
-                include "NavItemsFunction.php";
                 $navItem = new NavItemsFunction();
                 $navItem->navItems($navItemsdb, $dropDownItemsdb);
                 //navItems($navItemsdb, $dropDownItemsdb);

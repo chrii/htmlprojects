@@ -138,14 +138,13 @@ window.addEventListener("load", function(){
     let pitcher = new getraenk("Pitcher Bier", 12.80, table);
     let whiskey = new getraenk("Whiskey" , 5.20, table);
     
-
-    inputBtn.addEventListener(click, function() {
+    let inputBtn = document.getElementById("inputBtn");
+    inputBtn.addEventListener("click", function() {
         let getr = document.getElementById("getr").value;
         let pre = document.getElementById("pre").value;
-        let getra = getr.value;
-        let pr = pre.value;
-        console.log(getra + pr);
-        let getraenk = new getraenk(getr, pre, table);
+        new getraenk(getr, pre, table);
+        console.log(getr);
+        console.log(pre);
     }, false);
 
 

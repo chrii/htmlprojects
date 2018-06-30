@@ -1,9 +1,9 @@
 <?php
-function autoload ($autoload)
+function autoload($autoload)
 {
-    if (file_exists("../misc/{$autoload}.php"))
+    if (file_exists("../apps/{$autoload}.php"))
     {
-        require "../misc/{$autoload}.php";
+        require "../apps/{$autoload}.php";
     }
 }
 spl_autoload_register("autoload");
