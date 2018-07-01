@@ -1,8 +1,9 @@
 <?php
-
     include "../misc/arraydb.php";
     include "../misc/head.php";
     include "../misc/navbar.php";
+    include "../misc/sqldb.php";
+
 ?>
 </head>
 <body>
@@ -11,6 +12,7 @@
     <p class="lead">Willkommen auf meiner PHP und Javascript Testseite</p>
     <hr class="my-4">
     <p>Hier wird es in Zukunft eine Ansammlung an Tests und Projekten geben die meine Skills und meine Fertigkeiten unter Beweis stellen</p>
+    <!-- Möglichkeit finden den letzten Datenbank Eintrag von hier zu verweisen --> 
     <a class="btn btn-primary btn-lg" href="#" role="button">Latest Blog</a>
 </div>
 <h4 class="display-4">User</h4>
@@ -31,5 +33,4 @@
         ?>
     </tbody>
 </table>
-
 <?php include "../misc/footer.php"; ?>

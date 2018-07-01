@@ -10,7 +10,7 @@
                 <a class="nav-item nav-link active" href="index.php">Home<span class="sr-only">(current)</span></a>
                 <?php 
                 $navItem = new NavItemsFunction();
-                $navItem->navItems($navItemsdb, $dropDownItemsdb);
+                $navItem->navItems($navItemsdb, $dropDownItemsdb, "Projects");
                 //navItems($navItemsdb, $dropDownItemsdb);
                  ?>
             </div>

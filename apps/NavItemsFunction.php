@@ -1,11 +1,11 @@
 <?php 
 class NavItemsFunction 
 {   
-    public function navItems($itemdb, $dropdowndb = NULL)
+    public function navItems($itemdb, $dropdowndb = NULL, $dropdownTitle = NULL)
     {
         foreach ($itemdb AS $key => $item)
         { 
-            if ($item == "Projects")
+            if ($item == $dropdownTitle && isset($dropdowndb))
             {
                 $this->dropDownMen($dropdowndb, $item);
             } 
