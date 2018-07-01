@@ -13,9 +13,12 @@
             <div class="row">
                 <div class="col-12 col-md-8">
                 <?php   //TODO: Titlenames str_replace um sie als Sprungmarke benutzen zu können => $_GET !!
-                    $resource = getEntry(); 
-                    foreach($resource AS $blogpost): ?>
-                        <div class='card'>
+                    $resource = getEntry();
+                    $getter = $_GET['id'];
+                    if($getter == 'blogpage'){$getter = 1;}
+                    $blogpost = getTitle($getter);
+                ?>
+                        <div class='card' style="margin-bottom: 10px;">
                             <div class='card-header lead'>
                                 <?php echo $blogpost['title']; ?>
                             </div>
@@ -23,19 +26,19 @@
                                 <p><?php echo $blogpost['content']; ?></p>
                             </div>
                         </div>
-                    <?php endforeach; ?>
+
                 </div>
                 <div class="col-6 col-md-4">
                     <ul class="list-group list-group-flush lead">
                         <?php 
-                            $res = getEntry(); 
+                            $res = getEntry();
                             foreach($res as $blogList): ?>
-                                <li class='list-group-item list-group-item-dark'>
-                                    <a href=" blogpage.php?title=<?php echo $blogList['title']; ?>">
-                                        <?php echo $blogList['title']; ?>
+                                <li class='list-group-item list-group-item-dark rounded'>
+                                    <a href="blogpage.php?id=<?php echo $blogList['id']; ?>">
+                                        <?php echo $blogList['title'];?>
                                     </a>
                                 </li>
-                        <?php endforeach; var_dump($_GET); ?>
+                        <?php endforeach;?>
                     </ul>
                 </div>
             </div>

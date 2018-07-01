@@ -4,6 +4,12 @@
     include "../misc/navbar.php";
     include "../misc/sqldb.php";
 
+    $res = getEntry();
+    $counter = 0;
+    foreach($res as $count)
+    {
+        $counter++;
+    }
 ?>
 </head>
 <body>
@@ -13,7 +19,7 @@
     <hr class="my-4">
     <p>Hier wird es in Zukunft eine Ansammlung an Tests und Projekten geben die meine Skills und meine Fertigkeiten unter Beweis stellen</p>
     <!-- Möglichkeit finden den letzten Datenbank Eintrag von hier zu verweisen --> 
-    <a class="btn btn-primary btn-lg" href="#" role="button">Latest Blog</a>
+    <a class="btn btn-primary btn-lg" href="../pages/blogpage.php?id=<?php echo $counter; ?>" role="button">Latest Blog</a>
 </div>
 <h4 class="display-4">User</h4>
 <table class="table table-striped table-dark">

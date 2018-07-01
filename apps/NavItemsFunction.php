@@ -11,7 +11,7 @@ class NavItemsFunction
             } 
             else 
             {
-                echo "<a class='nav-item nav-link' href='../pages/{$key}.php'>{$item}</a>";
+                echo "<a class='nav-item nav-link' href='../pages/{$key}.php?id={$key}'>{$item}</a>";
             }
         }
     }
