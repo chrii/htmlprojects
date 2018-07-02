@@ -16,6 +16,8 @@ function getEntry()
 function getTitle($title)
 {
     global $blogdb;
-    $query = $blogdb->query("SELECT * FROM `posts` WHERE id = '{$title}'");
+    $query = $blogdb->prepare("SELECT * FROM `posts` WHERE id = :id");
+    $query->execute(['id' => $title]);
+    // $query = $blogdb->query("SELECT * FROM `posts` WHERE id = '{$title}'"); <--- Unsicher
     return $query->fetch();
 }

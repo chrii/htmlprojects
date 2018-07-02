@@ -34,7 +34,11 @@
     <tbody>
         <?php 
         $table = new CreateTable($userdb);
-        $table->createRow();
+        $test = $table->createRow();
+        foreach($test as $key)
+        {
+            echo $key;
+        }
         
         ?>
     </tbody>
