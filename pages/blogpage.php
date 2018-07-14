@@ -1,18 +1,20 @@
 <?php
     include "../misc/arraydb.php";
     include "../misc/head.php";
-    include "../misc/navbar.php";
     include "../misc/sqldb.php";
 ?>
 </head>
 <body>
-<?php  ?>
+<header>
+    <?php include "../misc/navbar.php";?>
+</header>
+<main role="class" class="container">
     <div class="container">
         <div class="content">
             <h1 class="display-4">Blog</h1>
             <div class="row">
                 <div class="col-12 col-md-8">
-                <?php   //TODO: Titlenames str_replace um sie als Sprungmarke benutzen zu können => $_GET !!
+                <?php
                     $resource = getEntry();
                     $getter = $_GET['id'];
                     if($getter == 'blogpage'){$getter = 1;}
@@ -33,7 +35,7 @@
                         <?php 
                             $res = getEntry();
                             foreach($res as $blogList): ?>
-                                <li class='list-group-item list-group-item-dark rounded'>
+                                <li class='list-group-item list-group-item-dark rounded small'>
                                     <a href="blogpage.php?id=<?php echo $blogList['id']; ?>">
                                         <?php echo $blogList['title'];?>
                                     </a>
@@ -44,4 +46,5 @@
             </div>
         </div>
     </div>
+</main>
 <?php include "../misc/footer.php"; ?>

@@ -1,7 +1,6 @@
 <?php
 include "../misc/arraydb.php";
 include "../misc/head.php";
-include "../misc/navbar.php";
 ?>
 <script type="text/javascript" src="bestellformular/js.js"></script>
 
@@ -13,7 +12,10 @@ include "../misc/navbar.php";
 </style>
 </head>
 <body>
-<div class="container">
+<header>
+    <?php include "../misc/navbar.php";?>
+</header>
+<main role="main" class="container">
     <div class="jumbotron">
         <h4 class="display-4">Dynamische Getänkeliste</h4>
         <p class="lead">Diese Zeilen werden im Hintergrund durch eine Klasse erstellt</p>
@@ -81,5 +83,5 @@ include "../misc/navbar.php";
             </div>
         </div>
     </div>
-</div>
+</main>
 <?php include "../misc/footer.php"; ?>

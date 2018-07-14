@@ -1,15 +1,17 @@
 <?php
     include "../misc/arraydb.php";
     include "../misc/head.php";
-    include "../misc/navbar.php";
 ?>
 </head>
 <body>
-<div class="container">
+<header>
+    <?php include "../misc/navbar.php";?>
+</header>
+<main role="main" class="container">
     <div class="row">
         <div class="col-sm-8">
 
-<ol class="carousel-indicators">
+    <ol class="carousel-indicators">
             <li data-target="#carousel-thumb" data-slide-to="0" class="active"> <img class="d-block w-100" src="../pic/backsmith.png" class="img-fluid"></li>
             <li data-target="#carousel-thumb" data-slide-to="1"><img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(121).jpg" class="img-fluid"></li>
             <li data-target="#carousel-thumb" data-slide-to="2"><img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Others/Carousel-thumbs/img%20(31).jpg" class="img-fluid"></li>
@@ -65,9 +67,8 @@
         <div class="col-sm-4">Zweiter Teil</div>
         </div>
 </div>
-<div class="container">
 
-</div>
+</main>
 
 
 <?php include "../misc/footer.php"; ?>

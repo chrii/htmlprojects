@@ -1,12 +1,15 @@
 <?php
     include "../misc/arraydb.php";
     include "../misc/head.php";
-    include "../misc/navbar.php";
 ?>
     <title>Reaktionstest</title>
     <script type="text/javascript" src="reaktionstest/javascript.js"></script>
 </head>
 <body>
+<header>
+    <?php include "../misc/navbar.php";?>
+</header>
+<main role="main" class="container">
     <div class="container" id="reactfield">
         <div class="jumbotron">
             <h4 class="display-4">Reaktionstest</h4>
@@ -25,5 +28,5 @@
         </div>
         </div>
     </div>
-
+</main>
 <?php include "../misc/footer.php"; ?>
