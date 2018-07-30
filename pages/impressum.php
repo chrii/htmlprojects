@@ -1,14 +1,12 @@
-<?php
-    include "../misc/arraydb.php";
-    include "../misc/head.php";
-?>
 </head>
 <body>
-  <header>
-    <?php include "../misc/navbar.php";?>
-  </header>
+<header>
+    <?php
+    require "../init/init.php";
+    require "../layout/navbar.php";?>
+</header>
 <main role="main" class="container">
-        <h1 class="display-3 border-bottom">Impressum</h1>
+    <h1 class="display-3 border-bottom">Impressum</h1>
     <div class="container border-bottom">
         <strong>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</strong><br/>
     <br/>
@@ -163,4 +161,4 @@
     Sollten Sie ein Konto bei Twitter haben, können Sie Ihre Datenschutzeinstellungen in den Konto- Einstellungen unter <a href="https://twitter.com/settings/account">https://twitter.com/settings/account</a> ändern.</p>
 
 </main>
-<?php require "../misc/footer.php"; ?>
+<?php include "../layout/footer.php"; ?>

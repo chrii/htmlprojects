@@ -1,11 +1,10 @@
-<?php
-    include "../misc/arraydb.php";
-    include "../misc/head.php";
-?>
 </head>
 <body>
   <header>
-    <?php include "../misc/navbar.php";?>
+    <?php 
+    require "../init/init.php";
+    require "../layout/navbar.php";
+    ?>
   </header>
   <main role="main" class="container">
     <div class="container row bmi-calc">
@@ -45,5 +44,5 @@
       </div>
     </div>
   </main>
-  <script type="text/javascript" src="bmi/index.js"></script>
-<?php include "../misc/footer.php"; ?>
+  <script type="text/javascript" src="../apps/javascript/bmi/index.js"></script>
+  <?php include "../layout/footer.php"; ?>

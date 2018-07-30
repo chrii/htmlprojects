@@ -1,13 +1,12 @@
-<?php
-    include "../misc/arraydb.php";
-    include "../misc/head.php";
-?>
     <title>Reaktionstest</title>
-    <script type="text/javascript" src="reaktionstest/javascript.js"></script>
+    <script type="text/javascript" src="../apps/javascript/reaktionstest/javascript.js"></script>
 </head>
 <body>
 <header>
-    <?php include "../misc/navbar.php";?>
+    <?php 
+    require "../init/init.php";
+    require "../layout/navbar.php";
+    ?>
 </header>
 <main role="main" class="container">
     <div class="container" id="reactfield">
@@ -29,4 +28,4 @@
         </div>
     </div>
 </main>
-<?php include "../misc/footer.php"; ?>
+<?php include "../layout/footer.php"; ?>

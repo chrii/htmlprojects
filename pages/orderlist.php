@@ -1,19 +1,18 @@
-<?php
-include "../misc/arraydb.php";
-include "../misc/head.php";
-?>
-<script type="text/javascript" src="bestellformular/js.js"></script>
-
+<script type="text/javascript" src="../apps/javascript/bestellformular/js.js"></script>
 <style>
     thead tr th 
     {
     text-align: center;
     }
 </style>
+
 </head>
 <body>
 <header>
-    <?php include "../misc/navbar.php";?>
+<?php 
+    require "../init/init.php";
+    require "../layout/navbar.php";
+    ?>
 </header>
 <main role="main" class="container">
     <div class="jumbotron">
@@ -68,14 +67,14 @@ include "../misc/head.php";
                         </h3>
                     </div> 
                     <div class="row">
-                        <div class="col-sm">
+                        <div class="col-sm getrPriceInList">
                             Getränke:
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm getrPriceInList">
                             <span id="drinkCard"></span>
                             <div id="testing"></div>
                         </div>
-                        <div class="col-sm">
+                        <div class="col-sm getrPriceInList">
                             <span id="drinkCardNumber"></span>
                         </div>
                     </div>
@@ -84,4 +83,4 @@ include "../misc/head.php";
         </div>
     </div>
 </main>
-<?php include "../misc/footer.php"; ?>
+<?php include "../layout/footer.php"; ?>
