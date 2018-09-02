@@ -1,7 +1,8 @@
 <?php
 namespace App\Posts;
+use ArrayAccess;
 
-class EntryModelling
+class EntryModelling implements ArrayAccess
 {
     public $id;
     public $title;
@@ -13,5 +14,25 @@ class EntryModelling
         {
             return substr($this->$entry, 0 , 10);
         }
+    }
+
+    public function offsetExists($offset)
+    {
+        return isset($this->$offset);
+    }
+    
+    public function offsetSet($offset, $value)
+    {
+        $this->$offset = $value;
+    }
+    
+    public function offsetGet($offset)
+    {
+        return $this->$offset;
+    }
+    
+    public function offsetUnset($offset)
+    {
+        unset($this->$offset);
     }
 }

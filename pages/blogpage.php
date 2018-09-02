@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-12 col-md-8">
                 <?php
-                    $postRepo = new App\Posts\PostsRepository($blogdb);
+                    $postRepo = $container->getPostRepo();
                     $getter = $_GET['id'];
                     if($getter == 'blogpage'){$getter = 1;}
                     $blogpostSingle = $postRepo->getSingleEntry($getter);

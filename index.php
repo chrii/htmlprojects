@@ -4,7 +4,7 @@
     <?php 
         require "init/init.php";
         require "layout/navbar.php";
-            $postRepo = new App\Posts\PostsRepository($blogdb);
+            $postRepo = $container->getPostRepo();
             $res = $postRepo->getAllEntrys();
             $counter = 0;
             foreach($res as $count)

@@ -7,9 +7,9 @@
     </div>
   </div>
   <div class="footer-copyright py-3 text-center">
-    <a href="layout/../impressum.php">Impressum</a> |
-    <a href="layout/../impressum.php#datenschutz"><strong> Datenschutz</strong></a> |
-    <a href="layout/../impressum.php#disclaimer">Copyright Disclaimer</a>
+    <a href="/php/htmlprojects/pages/impressum.php">Impressum</a> |
+    <a href="/php/htmlprojects/pages/impressum.php#datenschutz"><strong> Datenschutz</strong></a> |
+    <a href="/php/htmlprojects/pages/impressum.php#disclaimer">Copyright Disclaimer</a>
   </div>
 </footer>
     <script type="text/javascript" src="/php/htmlprojects/layout/js/jquery.js"></script>
